@@ -10,8 +10,8 @@ def run():
 
         BASE_DIR = os.path.dirname(__file__)
 
-        model = joblib.load(os.path.join(BASE_DIR, "5model.joblib"))
-        features = joblib.load(os.path.join(BASE_DIR, "5features.joblib"))
+        model = joblib.load(os.path.join(BASE_DIR, "5tmodel.joblib"))
+        features = joblib.load(os.path.join(BASE_DIR, "5tfeatures.joblib"))
         return model, features
 
     model, model_features = load_model()
