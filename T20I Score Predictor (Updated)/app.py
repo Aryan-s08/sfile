@@ -10,8 +10,8 @@ def run():
 
         BASE_DIR = os.path.dirname(__file__)
 
-        model = joblib.load(os.path.join(BASE_DIR, "5tmodel.joblib"))
-        features = joblib.load(os.path.join(BASE_DIR, "5tfeatures.joblib"))
+        model = joblib.load(os.path.join(BASE_DIR, "t5tmodel.joblib"))
+        features = joblib.load(os.path.join(BASE_DIR, "t5tfeatures.joblib"))
         return model, features
 
     model, model_features = load_model()
@@ -27,7 +27,7 @@ def run():
 
     st.sidebar.header("Match Inputs")
 
-    over = st.sidebar.number_input("Over (0–19)", min_value=0, max_value=19)
+    over = st.sidebar.number_input("Over (4–19)", min_value=4, max_value=19)
     ball = st.sidebar.number_input("Ball (1–6)", min_value=1, max_value=6)
     innings = st.sidebar.selectbox("Innings", [1])
     runs_from_ball = st.sidebar.number_input("Runs from Ball", min_value=0, max_value=6)

@@ -15,8 +15,8 @@ def run():
 
         BASE_DIR = os.path.dirname(__file__)
 
-        model = joblib.load(os.path.join(BASE_DIR, "npredmodel.joblib"))
-        features = joblib.load(os.path.join(BASE_DIR, "npredmodelfeatures.joblib"))
+        model = joblib.load(os.path.join(BASE_DIR, "nnpredmodel.joblib"))
+        features = joblib.load(os.path.join(BASE_DIR, "nnpredmodelfeatures.joblib"))
         return model, features
 
     model, model_features = load_model()
